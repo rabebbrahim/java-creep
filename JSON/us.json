@@ -1,0 +1,55 @@
+{
+    "groupe": "Team JavaCreep",
+    "member": [
+       { 
+            "name": "Nicolas",
+            "age": "30",
+            "couleur": "jaune",
+            "passions":[
+                "les fruits (de la passion...)",
+                "She-ra",
+                "la musique",
+                "la politique"
+            ]
+        },
+        {
+            "name": "Jesusa",
+            "age" : "28",
+            "couleur": "noir",
+            "passions":[
+                "les animés",
+                "les drama coréens"
+            ]
+        },
+        {
+            "name":"Alex",
+            "age": "23",
+            "couleur": "rouge",
+            "passions":[
+                "les animés",
+                "les voyages",
+                "les chiens"
+            ]
+        },
+        {
+            "name":"Lea",
+            "age": "25",
+            "couleur": "violet",
+            "passions":[
+                "la danse",
+                "le jeu de rôle",
+                "le dessin"
+            ]
+        },
+        {
+            "name":"Rabeb",
+            "age": "31",
+            "couleur":"vieux-rose",
+            "passions":[
+                "jeux d'échecs",
+                "la décoration",
+                "les voyages"
+            ]        
+        }
+    ]
+}

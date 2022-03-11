@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../design/style2.css" />
+		<title>To Do List</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul class="menu">
+					<li><a href="../Home/index.html">Home</a></li>
+					<li><a href="../music/music.html">Let's Play The Music</a></li>
+					<li><a href="../quiz/quiz.html">Guess who I am! </a></li>
+					<li><a href="../Meteo/meteo.html">Let's see the weather</a></li>
+					<li><a href="../GitHub/github.html">Find Me In Github </a></li>		
+					<li><a href="../JSON/json.html">About us </a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<h1>What Should I Do ?</h1>
+
+			<h2>To Do List</h2>
+			<section class="searchBar">
+				<input type="text" id="filter" placeholder="Search Items..." />
+			</section>
+			<!-- lists -->
+
+			<!-- add list -->
+			<div class="container_list">
+				<h2>Add item</h2>
+				<form id="addForm">
+					<input
+						type="text"
+						id="item"
+						class="add"
+						placeholder="add list"
+					/>
+					<input type="submit" id="submit" class="addBtn" value="Add" />
+				</form>
+				<button id="clr" type="submit">Clear list</button>
+
+				<div id="list-TODO">
+					<!-- to do -->
+
+					<h2>To do</h2>
+
+					<ul id="to-do-items">
+						<!-- empty list -->
+					</ul>
+
+					<h2>Completed</h2>
+					<ul id="items-completed">
+						<!-- empty list -->
+					</ul>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="footer">
+				<h3>All rights reserved &copy; 2021</h3>
+			</div>
+		</footer>
+
+		<script src="todolist.js"></script>
+	</body>
+</html>

@@ -1,0 +1,538 @@
+/************* GENERAL **************/
+:root{
+	--blue: rgb(43, 104, 128);
+	--orange: rgb(236, 105, 29);
+	--darkred: rgb(236, 60, 14);
+	--lightBlue: rgb(114, 182, 209);
+}
+
+/*font*/
+@font-face{
+	font-family: miller;
+	src: url(./font/Miller-Regular.otf);
+}
+@font-face{
+	font-family: lato thin;
+	src:url(./font/lato-light-webfont.woff2);
+}
+@font-face{
+	font-family: lato regular;
+	src: url(./font/Lato-Regular.ttf);
+}
+
+/*Géneral Box*/
+*{
+	box-sizing: border-box;
+	padding-top: none;
+    padding-bottom: none;
+    margin:0;
+	padding:0;
+	
+	
+}
+
+/************* BIG PARTS **************/
+footer, header{
+    background-color:var(--blue);
+	color: white;
+	font-family: lato thin;
+	border-radius: 2em 0.5em;
+	height:5em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+body{
+	background-color: rgb(255, 255, 255);
+	font-family: lato regular;
+	text-align: center;
+   	margin-left: 15em;
+	margin-right: 15em;
+	
+	
+}
+
+/************* MENU **************/
+.menu{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	
+}
+
+ul{
+	list-style: none;
+	
+}
+
+li{
+	
+	padding: 0.5em;
+}
+
+a{
+    text-decoration: none;
+	color: white;
+	
+}
+
+a:hover{
+	color: var(--orange);
+	
+}
+
+
+/************* IN COMMON **************/
+
+/* orange border main*/
+main{
+	border: 2px solid var(--orange);
+	border-radius: 2em 0.5em;
+	margin-top : 4em;
+	margin-bottom : 3em;
+	padding : 1em;
+	display: flex;
+	flex-direction: column;
+	font-family: lato regular;
+
+}
+
+/*title*/
+h1{
+	color: var(--orange);
+	margin-top: -1.8em;
+	text-align: left;
+	font-family: miller;
+}
+
+p{
+	margin-top: 1em;
+}
+
+/************* HOME **************/
+
+#mainTitle{
+	margin-top: 1em;
+	text-align: center;
+	font-size: 4em;
+}
+
+/************* ABOUT US **************/
+
+/*TEAM JAVACREEP*/
+#top-banner{
+	margin-top:1em;
+}
+h2{
+	font-family: miller;
+	font-size: 5em;
+	color: var(--blue);
+}
+#info{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+/* Each member container*/
+section{
+	display: flex;
+	flex-direction: column;
+	margin-right: 2em;
+	margin-left: 2em;
+	text-align: left;
+	
+}
+
+#member{
+	margin-top: 0.5em;
+	color: var(--orange);
+	font-family: miller;
+	font-size: 2em;
+}
+
+/*list passions*/
+.passionList{
+	list-style-type:disc;
+}
+
+#passion{
+	list-style-type: circle;
+}
+
+
+/************* WEATHER **************/
+
+/* form parts*/
+.top-banner {
+    margin: 2em;
+}
+
+.top-banner form {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.top-banner form input {
+	font-size: 2rem;
+	height: 40px;
+	padding: 5px 5px 10px;
+	border-bottom: 1px solid;
+}
+
+.top-banner form input::placeholder {
+	color: grey;	
+}
+
+/* submit button*/
+.top-banner form button {
+	font-size: 1em;
+	color:var(--orange);
+	padding: 0.5em;
+	margin-left: 3em;
+	border-radius: 0.5em ;
+	border-color: var(--orange);
+	background: white;
+	transition: background 0.3s ease-in-out;
+}
+
+.top-banner form button:hover {
+	background: var(--darkred);
+	color:white;
+}
+
+.top-banner form .msg {
+	padding-left: 1em;
+}
+
+/* results parts*/
+   
+	/*grid*/
+.ajax-section .cities {
+	display: grid;
+	grid-gap: 2em 2em;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (max-width: 1800px) { 
+.ajax-section .cities {
+	grid-template-columns: repeat(3, 1fr);
+}
+}
+
+@media screen and (max-width: 1600px) {
+.ajax-section .cities {
+	grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media screen and (max-width: 1100px) {  
+.ajax-section .cities {
+	grid-template-columns: repeat(1, 1fr);
+}
+}
+
+/*container with border*/
+.ajax-section .city {
+	position: relative;
+	padding: 40px 10%;
+	margin-bottom: 1.5em;
+	margin-right: 1.5em;
+	border: 2px solid;
+	border-radius: 20px;
+	border-color: var(--blue);
+	background-color: white;
+	box-shadow: 1em 1em 0.5em var(--blue) ;
+}
+
+/*city name & co*/
+.ajax-section .city sup {
+	font-size: 0.2em;
+}
+
+.ajax-section .city-name sup {
+	padding: 0.2em 0.6em;
+	border-radius: 1em;
+	color: white;
+	background: var(--blue);
+	font-family: lato regular;
+}
+
+/*temperature & feel*/
+.ajax-section .city-temp, .feels-like{
+	font-size: 5em;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	font-weight: bold;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.feels-like{
+	font-size: 2em;;
+}
+#celsius{
+	font-size: 3em;
+}
+/*weather picture*/
+.ajax-section figure{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.ajax-section img{
+	object-fit: contain;
+}
+
+/*weather indication*/
+.ajax-section figcaption {
+	display: flex;
+	justify-content: center;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin-top: -2em;
+	font-size: 1.5em;
+}
+
+/*wind indication*/
+.ajax-section #windspeed{
+	display: flex;
+	justify-content: center;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+/*styles pour compass météo*/
+
+#compass_div{
+	background: url('../media/compass_bg.png') center center no-repeat;
+	background-size: 75%;
+	position: relative; 
+	width: 160px;
+	height: 160px;
+}
+
+.compass{
+	background: url('../media/compass.png') center center no-repeat;
+	background-size: 35%;
+	width: 160px;
+	height: 160px;
+}
+
+#humidity{
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+/************* GITHUB **************/
+
+/*search bar*/
+.githubSearch {
+	display: flex;
+	text-align: center;
+}
+
+.githubSearch input[type=text]{
+	height: 5em;
+	width: 30em;
+	margin: 2em;
+	border: 1px solid var(--orange);
+	border-radius: 1em;
+}
+
+input::placeholder {
+	color: grey;	
+}
+
+.affichage {
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+}
+
+/*avatar*/
+.avatar {
+    height: 400px;
+    width: auto;
+    border-radius: 50%;   
+    background: #000;
+	border: 1px solid var(--blue);
+	margin-top:2em;
+}
+
+/*name user*/
+.carte h2{
+	/*haut droit bas gauche*/
+	margin: 0.2em 2em 0em 2em;
+	padding-top: 0.2em;
+	background-color: transparent;
+	border: 2px solid;
+	color: var(--blue);
+	border-radius: 1em 0.2em;
+}
+
+/* infos*/
+.cont-infos {
+	border: 2px solid var(--blue);
+	border-radius: 2em 0.5em;
+	background-color: var(--lightBlue);
+    margin-top: 20px;
+	list-style-type: none;
+	color: white;
+}
+
+.cont-infos li {
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 2em;
+}
+
+/************* TO DO LIST **************/
+
+/*search items bar*/
+.searchBar{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.searchBar input[type=text]{
+	height: 3em;
+	width: 30em;
+	margin-bottom: 2em;
+	border: 2px solid var(--blue);
+	border-radius: 1em;
+}
+
+/* add item */
+.container_list h2{
+	justify-content: center;
+	font-family: lato regular;
+	font-size: 3em;
+	color: white;
+}
+
+.container_list input{
+	font-size: 2rem;
+	height: 2em;
+	border: 1px solid var(--orange);
+	border-radius: 0.5em;
+}
+
+.container_list input[type=submit]{
+	margin: 1em;
+	padding: 0em 1em 0em 1em;
+	background: white;
+	color: var(--orange);
+}
+
+.container_list input[type=submit]:hover{
+	background-color: var(--orange);
+	color: white;
+}
+
+#clr{
+	padding: 0.5em 2em;
+	background: white;
+	border: 2px solid var(--darkred);
+	border-radius: 0.5em;
+	color: var(--darkred);
+}
+#clr:hover{
+	background-color: var(--darkred);
+	color: white;
+}
+
+/*TO DO*/
+#list-TODO{
+	border: 1px solid var(--blue);
+	background-color: var(--lightBlue);
+	border-radius: 2em 0.5em;
+	margin-top: 1em;
+}
+.todo-lists, .completed-lists{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	font-size: 2em;
+}
+	/*button complete & delete*/
+.todo-lists button{
+	margin: 0em 1em 0em 1em;
+	height: 2em;
+	width: 6em;
+	border-radius: 0.5em;
+	background-color: white;
+}
+
+ .complete{
+	border: 1px solid var(--blue);
+	color: var(--blue);
+}
+.complete:hover{
+	background-color: var(--blue);
+	color: white;
+}
+
+.delete {
+	border: 1px solid var(--darkred);
+	color: var(--darkred);
+}
+
+.delete:hover{
+	background-color: var(--darkred);
+	color: white;
+}
+
+/*COMPLETED*/
+.completed-lists li{
+	color: var(--darkred);
+	background-color: none;
+}
+
+/************* QUIZ **************/
+
+
+.question, .answers{
+	font-size:1.5em;
+	margin: 1em;
+	
+}
+/*statement & choices*/
+.question{
+	color : var(--blue);
+	text-align: left;
+}
+
+.answers li{
+	display: flex;
+	flex-direction: column;
+	
+}
+
+.answers li div{
+	text-align: left;
+	margin-left: 2em;
+	margin-top: -1em;
+}
+
+#submitQuiz{
+	margin: 1em;
+	height: 2em;
+	width: 10em;
+	border-radius: 0.5em;
+	background-color: white;
+	border: 1px solid var(--orange);
+	font-family: lato regular;
+	font-size: 1.5em;
+	color:var(--orange);
+}
+
+#submitQuiz:hover{
+	background-color: var(--orange);
+	color: white;
+}
